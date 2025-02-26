@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificacion</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+
+<body>
+    <h1 id="title">Toma de datos personales</h1>
+    <p id="description">Este formulario es para tomar datos personales para ponernos en contacto lo mas pronto posible</p>
+    
+    <form id="survey-form">
+
+        <fieldset>
+            <label id="name-label">Nombre del usuario<input type="text" name="text" id="name" placeholder="Nombre" required></label>
+        </fieldset>
+
+        <fieldset>
+            <label id="email-label">Correo electronico<input type="email" name="Email" id="email" placeholder="Correo electronico" required></label>
+        </fieldset>
+
+        <fieldset>
+            <label id="number-label">Edad<input type="number" name="number" id="number" min="13" max="120" placeholder="Edad" required></label>
+        </fieldset>
+
+        <fieldset>
+            <select name="dropdown" id="dropdown">
+                <option value="">(select one)</option>
+                <option value="1">Certificado</option>
+                <option value="2">Generar certificado</option>
+                <option value="3">Otros</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <!--Este es para binetas-->
+            <label for="carrera-universitaria"><input id="carrera-universitaria" type="radio" name="account-type" class="inline" value="1" checked />Universitario</label>
+            <label for="profesional"><input id="profesional" type="radio" name="account-type" class="inline" value="2" checked /> Profesional</label>
+            <!--estas son para chulear las opciones en la pagina-->
+            <label for="egresado"><input type="checkbox" name="personality" id="egresado" value="egresado">Egresado</label>
+            <label for="estudiante"><input type="checkbox" name="personality" id="estudiante" value="estudiante"> Estudiante</label>
+            <!-- <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label> -->
+
+            <label for="bio">Comentarios adicionales
+                <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Me gustaria que tuvieran más opciones de..."></textarea>
+            </label>
+        </fieldset>
+
+        <input id="submit" type="submit" value="Submit">
+    
+    </form>
+
+</body>
+</html>

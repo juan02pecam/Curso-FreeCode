@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <main>
+            <h1>Cat Photo App</h1> <!--Comentario-->
+            <h2>Cat Photos</h2> 
+            <h3>Menos importancia que los h2</h3>
+            <h4>Menos importancia que los h3</h4>
+            <h5>Menos importancia que los h4</h5>
+            <h6>Menos importancia que los h5</h6>
+            <p>A todo el mundo le gustan los citios web de gaticos</p>
+            <!--Todo elemento "img" es un elemento vacio, no lleva etiqueta cerrada-->
+            <img>
+            <!--"src" es un elemento para asignar una url-->
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg">
+            <!--El elemento "alt" sirve para asignarle un nombre a la imagen en caso
+            que no cargue-->
+            <img src="cat.jpg" alt="A cute orange cat lying on its back">
+            <a><!--elemento "a", sirve para vincular otras paginas--></a>
+             <!--*<a href="">* esta etiqueta es para hacer referencia a una pagina o a una
+                imagen-->
+           Ver más <a href="https://freecatphotoapp.com">Click en las fotos de gatitos<!--
+                es para asignar un texto al link-->></a> en esta galeria
+
+                <!--La etiqueta "P" le da el espacio a la imagen para que no se vea todo aontonado-->
+                <p> Ver más <a href="https://freecatphotoapp.com">Click en las fotos de gatitos<!--
+                    es para asignar un texto al link-->></a> en esta galeria</p>
+        </main>
+    </body>
+</html>

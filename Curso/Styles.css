@@ -1,0 +1,4 @@
+*{
+    box-sizing: content-box;  
+    box-sizing: border-box; /*Este comando hace todo lo contrario a content*/
+}

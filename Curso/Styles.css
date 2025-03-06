@@ -2,3 +2,17 @@
     box-sizing: content-box;  
     box-sizing: border-box; /*Este comando hace todo lo contrario a content*/
 }
+
+
+
+#img{
+    width: max(10rem, 18vw); /*esto es una escala para la imagen para que no tenga sus px por defecto*/
+}
+
+h1{
+    color: #000;
+}
+
+h1, h2{
+    font-family: verdana,  Tahoma;
+}

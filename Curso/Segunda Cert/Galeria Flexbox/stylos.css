@@ -18,7 +18,7 @@ body {
 }
   
 .gallery {
-    display: flex;
+    display: flex;  /*Este es el Flexbox*/
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;

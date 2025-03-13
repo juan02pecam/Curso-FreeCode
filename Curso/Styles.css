@@ -38,3 +38,10 @@ section{
     max-width: 600px;
     min-width: none;
   }
+
+  img{
+    display: block;
+    padding: auto;
+    margin: auto;
+    max-width: 100%;
+  }

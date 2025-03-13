@@ -30,7 +30,7 @@ header{
 
 
 section{
-    width: 80%;
+    width: 80%; /*Ancho*/
     margin-top: 0; /*arriba*/
     margin-right: auto; /*derecha*/
     margin-left: auto; /*izquierda*/

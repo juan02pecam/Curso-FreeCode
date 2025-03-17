@@ -1,10 +1,16 @@
 img{
     display: block;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     max-width: 100%;
     height: auto;
     margin: 0 auto;
 
+=======
+    align-items: center;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+>>>>>>> Stashed changes
 =======
     align-items: center;
     overflow-clip-margin: content-box;
@@ -15,6 +21,7 @@ img{
 #image{
     max-width: 100%;
     margin: 0 auto;
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
 }
@@ -55,6 +62,11 @@ a:visited{
 
 #img-caption{
     margin: 15px 0 5px 0;
+=======
+}
+main{
+max-width: 70%;
+>>>>>>> Stashed changes
 =======
 }
 main{

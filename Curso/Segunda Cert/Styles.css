@@ -1,62 +1,10 @@
 img{
     display: block;
-}
-
-#image{
-    max-width: 100%;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 h1{
-    margin-bottom: 0;
+    justify-content: center;
     display: flex;
-    justify-content: center;
-}
-
-footer, h1{
-    text-align: center;
-}
-
-#img-caption{
-    text-align: center;
-}
-body{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    text-align: center;
-    margin: 0%;
-}
-a{
-    color: black;
-}
-a:visited{
-    color: blueviolet; /*Este es cuando visite el enlace */
-}
-
-#img-div{
-    background-color: white;
-    padding: 10px;
-    margin: 0;
-    justify-content: center;
-}
-
-#img-caption{
-    margin: 15px 0 5px 0;
-}
-main{
-max-width: 70%;
-}
-main{
-max-width: 70%;
-}
-main{
-max-width: 70%;
-}
-main{
-max-width: 70%;
-}
-main{
-max-width: 70%;
-
 }

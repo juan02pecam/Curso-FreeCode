@@ -3,7 +3,9 @@
     box-sizing: border-box; /*Este comando hace todo lo contrario a content*/
 }
 
-
+html{
+    box-sizing: border-box; /*sirve para que el relleno y el borde de un elemento se incluyan en su ancho y alto total.*/
+}
 
 #img{
     width: max(10rem, 18vw); /*esto es una escala para la imagen para que no tenga sus px por defecto*/
@@ -15,6 +17,7 @@ h1{
 
 h1, h2{
     font-family: verdana,  Tahoma;
+    flex-direction: column-reverse; /*esto mostrara los elementos anidados del fondo en la parte superior.*/
 }
 
 
@@ -44,4 +47,19 @@ section{
     padding: auto;
     margin: auto;
     max-width: 100%;
+  }
+
+  /*Elemetos que sieven para ocultar conjunto de propiedades utilizadas para asegurar que los elementos estén completamente ocultos visualmente.  pero que sigan siendo anunciados por los lectores de pantalla.*/
+
+  span[class~="sr-only"] {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);/*se utiliza para definir la visibilidad de las partes de un elemento.*/
+    clip-path: inset(50%);/*La propiedad clip-path determina la forma que la propiedad clip debe tomar. */
+    height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  padding: 0;
+  margin: -1px;  
   }

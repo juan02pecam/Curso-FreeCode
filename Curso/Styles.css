@@ -13,11 +13,17 @@ html{
 
 h1{
     color: #000;
+    justify-content: flex-end; /*va a hacer que todo el contenido se alinie hasta el final de la direccion de flex*/
+}
+
+tr{
+    vertical-align: top;/*Alinea el texto verticalmente en la parte superior,*/
 }
 
 h1, h2{
     font-family: verdana,  Tahoma;
     flex-direction: column-reverse; /*esto mostrara los elementos anidados del fondo en la parte superior.*/
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0; /*es una función CSS que te permite calcular un valor basado en otros valores. Por ejemplo, lo puedes usar para calcular el ancho del viewport menos el margen de un elemento.*/
 }
 
 
@@ -26,33 +32,74 @@ h1, h2{
     text-decoration: none;
 }
 
+
+tr.total td/*tengo  que poner la primera parte de la tabla*/:nth-of-type(3)/*se utiliza para apuntar a elementos específicos en función de su orden entre los hermanos del mismo tipo.*/{
+    padding-right: 0.5rem;
+}
+
+tr.data td:last-of-type/*selecciona específicamente el último.*/{
+    padding-right: 0.5rem;
+}
+
 header{
     text-align: center;
+    border-collapse: collapse; /*ermitirá que los bordes de las celdas se contraigan en un solo borde, en lugar de un borde alrededor de cada celda*/
     
 }
 
+#years span[class]{ /*este elemento apuntara a todo elemento de years con un span y con un class sin importar el valor del atrivuto*/
+    font-weight: bold; /*este estilizador permite que el texto esre en negrita.*/
+}
+
+span:not(.sr-only)/*este selector hace que todos los elementos que tengan la clase "sr-only" u otras no tomen los efectos de "#id span[class]"*/{
+    font-weight: normal;
+    
+}
+
+tr.total:hover/*el elemento hover hace que cuando uno pase el cursor cambie de color (Diseno Web Responsivo - Lin 121)*/{
+    background-color: #99c9ff;
+}
+
+tr[class="total"]/*apunta a cualquier elemento que tenga un atributo con un valor específico.*/{
+    font-weight: bold;
+}
+
+/*La diferencia clave entre tr[class="total"] y tr.total es que el primero seleccionara los elementos tr donde la única clase sea total. The second will select tr elements where the class includes total.*/
+tr[class="total"] th/*hace lo mismo qye el de la fila 45, con diferencia que va difigido a los elementos de "th".*/{
+    font-weight: bold;
+}
 
 section{
-    width: 80%; /*Ancho*/
+    width: 80%; /*De finira el ancho*/ /*"100vw" ajustando width específicamente permitiría que los elementos se encojan dentro del contenedor.*/
     margin-top: 0; /*arriba*/
     margin-right: auto; /*derecha*/
     margin-left: auto; /*izquierda*/
     margin-bottom: 10px; /*abajo*/
+    position: absolute;
     max-width: 600px;
     min-width: none;
   }
 
   img{
-    display: block;
+    display: block; /*visualización de bloque*/
     padding: auto;
     margin: auto;
     max-width: 100%;
   }
 
+  h1 .flex span:first-of-type{  /*se utiliza para apuntar al primer elemento que coincida con el selector.*/
+    font-size: 0.7em; 
+    font-style: italic; /*estilos de las letras*/
+  }
+
+  h1 .flex span:last-of-type{  /*hace exactamente lo contrario - apunta al último elemento que coincida con el selector.*/
+    font-size: 1.2em;
+  }
+
   /*Elemetos que sieven para ocultar conjunto de propiedades utilizadas para asegurar que los elementos estén completamente ocultos visualmente.  pero que sigan siendo anunciados por los lectores de pantalla.*/
 
   span[class~="sr-only"] {
-    border: 0;
+    border: 0 !important /*!important se usa para asegurar que esas propiedades siempre serán aplicadas, sin importar el orden o la especificidad*/;
     clip: rect(1px, 1px, 1px, 1px);/*se utiliza para definir la visibilidad de las partes de un elemento.*/
     clip-path: inset(50%);/*La propiedad clip-path determina la forma que la propiedad clip debe tomar. */
     height: 1px;

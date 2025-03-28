@@ -70,8 +70,8 @@ tr[class="total"] th/*hace lo mismo qye el de la fila 45, con diferencia que va 
 }
 
 section{
-    width: 80%; /*De finira el ancho*/ /*"100vw" ajustando width específicamente permitiría que los elementos se encojan dentro del contenedor.*/
-    margin-top: 0; /*arriba*/
+    width: 80%; /*Definira el ancho*/ /*"100vw" ajustando width específicamente permitiría que los elementos se encojan dentro del contenedor.*/
+    margin-top: 0; /*arriba*/  
     margin-right: auto; /*derecha*/
     margin-left: auto; /*izquierda*/
     margin-bottom: 10px; /*abajo*/
@@ -85,6 +85,7 @@ section{
     padding: auto;
     margin: auto;
     max-width: 100%;
+    
   }
 
   h1 .flex span:first-of-type{  /*se utiliza para apuntar al primer elemento que coincida con el selector.*/

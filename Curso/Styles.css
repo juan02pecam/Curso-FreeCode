@@ -65,7 +65,7 @@ tr[class="total"]/*apunta a cualquier elemento que tenga un atributo con un valo
 }
 
 /*La diferencia clave entre tr[class="total"] y tr.total es que el primero seleccionara los elementos tr donde la única clase sea total. The second will select tr elements where the class includes total.*/
-tr[class="total"] th/*hace lo mismo qye el de la fila 45, con diferencia que va difigido a los elementos de "th".*/{
+tr[class="total"] th/*hace lo mismo que el tr[class="total"], con diferencia que va difigido a los elementos de "th".*/{
     font-weight: bold;
 }
 

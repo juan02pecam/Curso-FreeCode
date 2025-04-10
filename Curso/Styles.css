@@ -78,6 +78,7 @@ section{
     position: absolute;
     max-width: 600px;
     min-width: none;
+    background: linear-gradient(--building-color1,--window-color1); /*para crear el efecto de difuminado*/
   }
 
   img{

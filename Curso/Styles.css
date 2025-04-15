@@ -16,6 +16,7 @@
 
 html{
     box-sizing: border-box; /*sirve para que el relleno y el borde de un elemento se incluyan en su ancho y alto total.*/
+    display: grid; /*sirve para manipular el elemento como una cuadricula*/
 }
 
 #img{

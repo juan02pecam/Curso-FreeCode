@@ -9,6 +9,10 @@
     --window-color4: #8cb3d9;
 }
 
+@media only screen and(max-width:720px){
+    
+}
+
 *{
     box-sizing: content-box;  
     box-sizing: border-box; /*Este comando hace todo lo contrario a content*/

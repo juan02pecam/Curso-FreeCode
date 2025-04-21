@@ -1,0 +1,51 @@
+.nav-link{
+    display: flex;
+    justify-content: space-evenly; /*Organiza todos los elementos de la lista en linea*/
+    align-items: center;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+li > a{
+    text-decoration: none; /*Quita la linea del enlace*/
+    color: white;
+}
+
+nav>ul>li:hover{
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+}
+
+nav > ul > li {  /*Quita las biñetas de la lista desordenada*/
+    color: #dfdfe2;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+}
+
+@media only screen and (max-width:600px){
+    body{
+        background-color: aqua;
+    }
+}
+
+
+
+
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    z-index: 1000; /* Para que esté por encima del contenido */
+  }
+
+  body {
+    margin: 0;
+    padding-top: 60px; /* Ajusta este valor según la altura del nav-bar */
+}

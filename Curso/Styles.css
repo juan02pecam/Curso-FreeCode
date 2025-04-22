@@ -13,6 +13,11 @@
     
 }
 
+div{
+    overflow: hidden /*en CSS sirve para ocultar el contenido que se desborda de un contenedor.*/
+}
+
+
 *{
     box-sizing: content-box;  
     box-sizing: border-box; /*Este comando hace todo lo contrario a content*/

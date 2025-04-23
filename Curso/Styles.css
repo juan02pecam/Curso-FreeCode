@@ -40,6 +40,7 @@ h1{
 
 tr{
     vertical-align: top;/*Alinea el texto verticalmente en la parte superior,*/
+    transform: rotate(130deg) rotateX();
 }
 
 h1, h2{
@@ -76,6 +77,10 @@ header{
 span:not(.sr-only)/*este selector hace que todos los elementos que tengan la clase "sr-only" u otras no tomen los efectos de "#id span[class]"*/{
     font-weight: normal;
     
+}
+
+.penguin{
+    transition: ease-in-out 0ms;
 }
 
 tr.total:hover/*el elemento hover hace que cuando uno pase el cursor cambie de color (Diseno Web Responsivo - Lin 121)*/{

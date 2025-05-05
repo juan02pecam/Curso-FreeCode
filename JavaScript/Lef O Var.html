@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JS</title>
+</head>
+<body>
+    <H1>Fundamentos JavaScript</H1>
+    <script>
+
+        //Esto es un comentario de una sola linea
+        /*Esto es una 
+        Comentario de varias lineas*/
+
+        var hola="Hola Mundo"; // "var" es variable reservada para iniciar, es una variable global
+        console.log(hola);
+
+        let hello="Hello World"; // "let" Solo permite que sea imprimida en el bloque a sido definida
+        console.log(hello);
+
+        console.log("***************************************")
+
+        //Ambito de bloque con var
+        // var no respeta el orden de los bloques, imprime lo que esta en las llaves, cosa que no debe
+
+        var musica="Rock";
+        console.log("Variable Musica antes del Bloque", musica)
+
+        {
+            //Esto es un juego de llaves   
+            /*Acá se pueden repetir los nombres, en este caso "musica" porque son
+            Bloques diferentes al anterior */
+            var musica="Pop";
+            console.log("Variable Musica dentro del Bloque", musica)
+        }
+
+        console.log("Variable Musica despues del Bloque", musica)
+
+        //Ambito de bloque con let
+        //let si respeta el comportamiento de bloque
+
+        console.log("***************************************")
+
+        let musica1="Rock";
+        console.log("Variable let Musica antes del Bloque", musica1)
+
+        {
+            let musica1="Pop"
+            console.log("Variable let Musica dentro del Bloque", musica1)
+        }
+
+        console.log("Variable let Musica despues del Bloque", musica1)
+
+    </script>
+</body>
+</html>

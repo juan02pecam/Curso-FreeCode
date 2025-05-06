@@ -8,7 +8,30 @@
 <body>
     <h1>Cadenas de texto en JavaScript</h1>
     <script>
-        
+        //Cadenas de texto aka strings
+        let nombre="Juan"; //con doble comillas 
+        let apellido='Peña';//con comillas simples
+        let saludo=new String("Hola mundo") /*new es un operador que permite crear un
+        nuevo objeto para darle un dato, es una forma mas formal, pero no es la mas usada */
+        // todas son validas para crear texto
+        let lorem="     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.     ";
+
+        console.log(nombre,apellido,saludo);//se puede imprimir variables juntas al tiempo de esta manera
+        console.log(
+            nombre.length,
+            apellido.length,
+            saludo.length,
+            nombre.toUpperCase(), //obliga al usuario que todo lo que escriba salga en MAYUSCULAS
+            apellido.toLowerCase(),//oblia al usuario que todo lo que escriba salga en minusculas
+            lorem.includes("amet"), //"includes" busca si la palabra ingresada esta en el texto que se agrego en el "let"
+            lorem.includes("Juan"),
+            lorem,
+            lorem.trim(), //"trim" quita los espacios en blanco y caracteres especiales
+            lorem.split(" "), //"split(" ")" hace que separe el texto uno por uno, sin espacio lo que hace es que separa letra por letra
+            //lorem.split("") -- de esta manera muestra letra por letra
+            lorem.split("."), //lo separa por punto o por la letra o parrafo que deseemos
+        );
+
     </script>
 </body>
 </html>

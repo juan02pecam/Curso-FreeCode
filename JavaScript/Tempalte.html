@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+<body>
+    <h1>Tempalte</h1>
+    
+    <script>
+        let nombre="Juan";
+        let apellido="Peña";
+//concatenar es unir una variable con otra
+        let saludo="Hola mi nombre es "+nombre+" "+apellido;//así se concatena
+
+        console.log(saludo);
+
+        //interpolar variables es incluir dentro de una variable una cadena de textos
+        //Tempalte String
+        let saludo2=`Hola mi nombre es ${nombre} ${apellido}`;
+        console.log(saludo2);
+
+        let ul="<u><li>Primevera</li><li>invierno</li><li>verano</li><li>otoño</li></u>";
+        console.log(ul); //Si se imprime con comillas dobles ("") no pueden existir espacios
+
+        let ul2 =`
+        <u>
+            <li>Primevera</li>
+            <li>invierno</li>
+            <li>verano</li>
+            <li>otoño</li>
+        </u>`; //el Template String (``) si permite tener espacios o saltos
+
+
+        console.log(ul2);
+
+    </script>
+</body>
+</html>
+
+<!--`texto de cadena de caracteres` para usarlo como en saludo2-->
+

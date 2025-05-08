@@ -35,7 +35,7 @@
     }
 
     /* Mostrar elementos en pantallas pequeñas */
-    @media (max-width: 2080px) {
+    @media (max-width: 1080px) {
       .hamburguesa {
         display: flex;
       }
@@ -46,7 +46,7 @@
     }
 
     /* En pantallas grandes, el menú está siempre visible */
-    @media (min-width: 2080px) {
+    @media (min-width: 1080px) {
       nav {
         display: flex;
         flex-direction: row;

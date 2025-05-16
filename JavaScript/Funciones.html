@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <h1>Funciones en JavaScript</h1>
+
+    <script>
+        //Funcion declarada
+        function estoEsUnaFuncion() {
+            console.log("uno");
+            console.log("dos");
+            console.log("tres");
+        }
+
+        //Invocacion de funcion
+        estoEsUnaFuncion();
+        estoEsUnaFuncion(); //Una funcion se puede imprimir varias veces, cuantas veces la imprimamos se reflejara en la consola
+        estoEsUnaFuncion();
+
+        //funcion con return, o declaracion de funcion
+        function unaFuncionQueDevuelveElValor() {
+            console.log("uno");
+            return 19; //se toma el primer "return", ignorando el resto de lineas de codigo que estan por debajo de el
+            console.log("dos");
+            console.log("tres");
+            return "La funcion a retornado una cadena de texto"
+        }
+        /*Importante - Sin el let o una variable, no se va a poder viasualizar lo que sale en el return, por lo que es necesario
+        crear una variable para que así con el console.log, se pueda visualizar toda la funcion.*/
+        let valorDeFuncion = unaFuncionQueDevuelveElValor();
+
+        console.log (valorDeFuncion);
+
+        //funcion que recibe valores
+
+        //function Saludar(nombre, edad) { //Funcion con parametros sin datos
+            //console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`); //${nombre}, se usa para llamar valores, en este caso nombre
+
+        //}
+
+        function Saludar(nombre = "Desconocido", edad = 0) { //Funcion con parametros por defecto
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`); //${nombre}, se usa para llamar valores, en este caso nombre
+
+        }
+
+        Saludar("Juan", 21); //pero tambien podemos cambiar los valores de "saludar" invocando la funcion con los valores
+        Saludar();//Aca es por defecto
+        Saludar("Pipe", 24);
+
+        funcionDeclarada();//igual colocando la invocacion de una funcion antes de crearla, va a funcionar
+
+        //Funciones declaradas VS funciones Expresas
+        function funcionDeclarada(){
+            console.log("Esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada ");
+
+        }
+
+        funcionDeclarada();
+
+        //Funciones expresadas, o llamada funcion anonima
+        //y esto "=>" es un arrou funtion, el cual es lo mismo que "=function"
+
+        //funcionExpresada(); //no deja funcionar la funcionExpresada.
+
+        const funcionExpresada = function(){
+            console.log("Esto es una funcion expresada, es decir, uan funcion que se le ha asignado como valor a una variable, si invocamos esta funcion antes de su definicion JS nos dira.... Cannot access 'funcionExpresada' before initialization");
+        }
+
+        funcionExpresada();
+
+    </script>
+</body>
+</html>

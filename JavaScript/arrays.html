@@ -7,5 +7,41 @@
 </head>
 <body>
     <h1>Arrays en JavaScript</h1>
+
+    <script>
+
+        const a = [];
+        const b = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]]; //Si hay un arreglo con 4 caracteres, en la cosola se reflejara
+        console.log(a);
+        console.log(b);
+        console.log(b[2]); //con los corchetes [] y el nombre de la constante, se imprimira lo que este en la posision que pongamos
+        console.log(b[1]);
+        console.log(b[3][2]); //estoy imprimiendo el elemento "C" del tercer valor de "b"
+        console.log(b[3][3][0]);
+
+
+        const c = Array.of("X", "Y", "Z", 9, 8, 7);
+        console.log(c);
+
+        const d = Array(100).fill(false);
+        console.log(d);
+
+        const colores = ["Rojo", "Blanco", "Verde"]
+        console.log(colores);
+
+        colores.push("Naranja");//"push" permite agregar otra varia o valor a un elemento
+        console.log(colores);
+
+        colores.pop();
+        console.log(colores); //"pop" elimina el ultimo elemento
+
+        colores.pop();
+        console.log(colores);
+
+        colores.forEach(function(el, index){
+            console.log(`<li id="${index}">${el}</li>`)
+        })
+
+    </script>
 </body>
 </html>

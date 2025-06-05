@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <style>
+            body {          
+                font-family: 'Roboto', sans-serif;
+                /*background-color: #f4f4f4;*/
+                background-image: url(https://images.unsplash.com/photo-1567309258733-9bbe3672f827?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+                background-repeat: no-repeat; /*Para no repetir la imagen de fondo*/
+                background-attachment: fixed;/*Este elemento permite que la imagen se adapte y no se deforme*/
+                background-size: cover;/*Con este elemento la imegen cubre todo el elemento*/
+                margin: 0;
+                padding: 0;
+                display: flex;
+                height: 100vh;
+                flex-direction: column; /* "Ajuste para la orientación de la columna." */
+                align-items: center; /*Centrar los formularios horizontalmente.*/
+            }
+
+
+            .form-container {
+                max-width: 600px;
+                width: 100%;
+                background-color: #fff;
+                border: 1px solid #dadce0;
+                border-top: 8px solid orangered; /*Agregado: Borde superior naranja con algo de rojo.*/
+                border-radius: 8px;
+                box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+                box-sizing: border-box;
+                padding: 22px;
+                margin-bottom: 20px; /*Ajuste para agregar espacio entre formularios.*/
+            }
+
+
+            .form-container2 {
+                max-width: 600px;
+                width: 100%;
+                background-color: #fff;
+                border: 1px solid #dadce0;
+                border-radius: 8px;
+                box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+                box-sizing: border-box;
+                padding: 32px;
+                margin-bottom: 20px; /* Ajuste para agregar espacio entre formularios. */
+            }
+
+
+            .form-container3 {
+                max-width: 600px;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0px;
+                margin-bottom: 20px; /*Ajuste para agregar espacio entre formularios.*/
+            }
+
+
+            .question-container {
+                margin-bottom: 32px;
+            }
+
+
+            .title {
+                font-size: 32px;
+                font-weight: bold;
+                color: #202124;
+                margin-bottom: 12px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+                /*font-weight: bold;*/
+                color: #202124;
+                margin-bottom: 12px;
+            }
+                        
+            .warning {
+                font-size: 14px;
+                /*font-weight: bold;*/
+                color: red;
+                margin-bottom: 12px;
+            }
+
+
+            .question {
+                font-size: 18px;
+                font-weight: bold;
+                color: #202124;
+                margin-bottom: 12px;
+            }
+
+
+            .input-container {
+                margin-bottom: 24px;
+            }
+
+
+            input {
+                width: calc(100% - 24px);
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px solid #dadce0;
+                border-radius: 4px;
+                font-size: 16px;
+                margin-top: 4px;
+                transition: border-color 0.3s;
+            }
+
+
+            input:focus {
+                border-color: orangered;
+                outline: none;
+            }
+
+
+            button {
+                background-color: orangered;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s;
+            }
+
+
+            button:hover {
+                background-color: orange;
+            }
+                    
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body >
+        
+        <div id="0" class="form-container" style="display: none;" >
+            <div class="question-container">
+                <div class="title" id="title"></div>
+                <div class="subtitle" id="ty"style="display: none;">Your response has been recorded</div>
+            </div>
+            <p>06/06/2025</p> <!--"div" de la descripcion del formulario-->
+        </div>
+
+        <div id="1" class="form-container2" style="display: none;">
+            <div class="question-container">
+                <div class="question">Nombre completo:</div>
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="username" name="username" placeholder="Ingrese su nombre completo">
+            </div>
+
+            <div class="warning" id="warning"style="display: none;">This is a required question</div>
+        </div>
+
+        <div id="1.1" class="form-container2" style="display: none;">
+            <div class="question-container">
+                <div class="question">Documento:</div>
+                
+            </div>
+
+            <div class="input-container">
+                <input type="number" id="document" name="document" placeholder="Ingrese su numero de documento">
+            </div>
+
+            <div class="warning" id="warning"style="display: none;">This is a required question</div>
+    
+        </div>
+
+        <div id="1.2" class="form-container2" style="display: none;">
+            <div class="question-container">
+                <div class="question">Planta y proceso:</div> 
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="plant" name="plant" placeholder="Ingrese la planta y proceso al que pertenece">
+            </div>
+
+            <div class="warning" id="warning"style="display: none;">This is a required question</div>
+    
+        </div>
+
+        <div id="2" class="form-container2" style="display: none;">
+            <div class="question-container">
+                <div id="question" class="question"></div>
+            </div>
+                        <!--"div" del canvas de la firma-->
+            <input id="file" type="file"  style="display: none;"/>
+            <canvas width="500" height="300"></canvas>
+            <br>
+            <br>
+
+            <button type="button" id="clearButton">Reintentar</button>
+
+        </div>
+
+        <div class="form-container3">
+            <button type="button" id="submit" onclick="send()" style="display: none;">Enviar</button>
+        </div>
+
+        <!--Script-->
+        <script>
+
+            google.script.run.withSuccessHandler(function(result) {
+                var ti=result;
+                document.getElementById("title").textContent=(ti);
+                document.getElementById("0").style.display="block";
+                document.getElementById("1").style.display="block";
+                document.getElementById("1.1").style.display="block";
+                document.getElementById("1.2").style.display="block";
+                document.getElementById("2").style.display="block";
+                document.getElementById("submit").style.display="block";
+            }).title();
+            
+                google.script.run.withSuccessHandler(function(result) {
+                var quest=result;
+                document.getElementById("question").textContent=(quest);
+
+            }).question();
+
+
+            //crear un elemento de lienzo y agregarlo al cuerpo del documento
+            var canvas = document.querySelector('canvas');
+            var clearButton = document.getElementById('clearButton');
+
+            var fileInput = document.getElementById('file');
+
+            // algunas correcciones... ( ≖_≖)
+
+            // obtener el contexto 2D del lienzo y establecerle el tamaño correcto
+            var ctx = canvas.getContext('2d');
+
+            //última posición conocida
+            var pos = { x: 0, y: 0 };
+
+            document.addEventListener('mousemove', draw);
+            document.addEventListener('mousedown', setPosition);
+            document.addEventListener('mouseenter', setPosition);
+            canvas.addEventListener('touchstart', setPosition, { passive: false });
+            canvas.addEventListener('touchmove', draw, { passive: false });
+            clearButton.addEventListener('click', clearCanvas);
+
+            // nueva posición desde el evento del mouse
+            function setPosition(e) {
+                var rect = canvas.getBoundingClientRect(); // Obtener los límites del canvas
+                if (e.touches) {
+                    pos.x = e.touches[0].clientX - rect.left;
+                    pos.y = e.touches[0].clientY - rect.top;
+                } 
+                else {
+                    pos.x = e.clientX - rect.left;
+                    pos.y = e.clientY - rect.top;
+                }
+            }
+
+            function draw(e) {
+            // evitar el desplazamiento
+            e.preventDefault();
+
+            // Se debe presionar el botón izquierdo del mouse o el tacto debe estar activo.
+            if (e.buttons !== 1 && !e.touches) return;
+
+            ctx.beginPath(); // begin
+
+            ctx.lineWidth = 5;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = 'black';
+
+            ctx.moveTo(pos.x, pos.y); // from
+            setPosition(e);
+            ctx.lineTo(pos.x, pos.y); // to
+
+
+            ctx.stroke(); // draw it!
+            }
+
+            //limpiar el lienzo
+            function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+
+            //guardar el contenido del lienzo como un archivo
+            function saveSignature() {
+
+
+            canvas.toBlob(function (blob) {
+                const file = new File([blob], "signature.png", { type: "image/png" });
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                fileInput.files = dataTransfer.files;
+                var cual = saveFile(fileInput, 'signature');
+            });
+            }
+
+            function saveFile(f,cual) {
+
+                let name = document.getElementById("username").value;
+
+                const file = f.files[0];
+                const fr = new FileReader();
+                fr.onload = function (e) {
+                    const obj = {
+                    filename: cual+" "+name,
+                    mimeType: file.type,
+                    bytes: [...new Int8Array(e.target.result)]
+                    };
+                    google.script.run.withSuccessHandler(data => {
+
+                    }).saveFile(obj, name);
+                }
+                fr.readAsArrayBuffer(file);
+                return(cual);
+            }
+
+            function send() {
+                const name = document.getElementById("username").value;
+                const documentValue = document.getElementById("document").value;
+                const plantyprocess = document.getElementById("plant").value;
+
+                if (!name || !documentValue || !plantyprocess) {
+                    document.getElementById("1").style.borderColor = "red";
+                    document.getElementById("1.1").style.borderColor = "red";
+                    document.getElementById("1.2").style.borderColor = "red";
+                    document.getElementById("warning").style.display = "block";
+                    return;
+                }
+
+                saveSignature();
+
+                google.script.run.answer(name, documentValue, plantyprocess);
+
+                document.getElementById("1").style.display = "none";
+                document.getElementById("1.1").style.display = "none";
+                document.getElementById("1.2").style.display = "none";
+                document.getElementById("2").style.display = "none";
+                document.getElementById("submit").style.display = "none";
+                document.getElementById("ty").style.display = "block";
+            }
+
+        </script>
+
+    </body>
+    
+</html>
+
+
+

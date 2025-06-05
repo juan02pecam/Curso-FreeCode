@@ -1,0 +1,136 @@
+body {          
+    font-family: 'Roboto', sans-serif;
+    /*background-color: #f4f4f4;*/
+    background-image: url(https://static.wixstatic.com/media/839ea0_7533a16299ea45a5a4bc332d4c7a5c63~mv2.png/v1/crop/x_0,y_133,w_2495,h_1710/fill/w_168,h_110,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/cosasHelios-03.png);
+    background-repeat: no-repeat; /*Para no repetir la imagen de fondo*/
+    background-attachment: fixed;/*Este elemento permite que la imagen se adapte y no se deforme*/
+    background-size: cover;/*Con este elemento la imegen cubre todo el elemento*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    flex-direction: column; /* "Adjustment for column orientation" */
+    align-items: center; /* Center the forms horizontally */
+}
+
+
+.form-container {
+                max-width: 600px;
+                width: 100%;
+                background-color: #fff;
+                border: 1px solid #dadce0;
+                border-top: 8px solid #673ab7; /* Added: Violet top border. */
+                border-radius: 8px;
+                box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+                box-sizing: border-box;
+                padding: 22px;
+                margin-bottom: 20px; /* Adjustment to add space between forms */
+
+
+}
+
+
+.form-container2 {
+                max-width: 600px;
+                width: 100%;
+                background-color: #fff;
+                border: 1px solid #dadce0;
+                border-radius: 8px;
+                box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+                box-sizing: border-box;
+                padding: 32px;
+                margin-bottom: 20px; /* Adjustment to add space between forms. */
+}
+
+
+.form-container3 {
+                max-width: 600px;
+                width: 100%;
+            
+            
+            
+                box-sizing: border-box;
+                padding: 0px;
+                margin-bottom: 20px; /* Adjustment to add space between forms. */
+}
+
+
+.question-container {
+                margin-bottom: 32px;
+}
+
+
+.title {
+                font-size: 32px;
+                font-weight: bold;
+                color: #202124;
+                margin-bottom: 12px;
+}
+
+.subtitle {
+                font-size: 14px;
+                /*font-weight: bold;*/
+                color: #202124;
+                margin-bottom: 12px;
+}
+            
+.warning {
+                font-size: 14px;
+                /*font-weight: bold;*/
+                color: red;
+                margin-bottom: 12px;
+}
+
+
+.question {
+                font-size: 18px;
+                font-weight: bold;
+                color: #202124;
+                margin-bottom: 12px;
+}
+
+
+.input-container {
+                margin-bottom: 24px;
+}
+
+
+input {
+                width: calc(100% - 24px);
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px solid #dadce0;
+                border-radius: 4px;
+                font-size: 16px;
+                margin-top: 4px;
+                transition: border-color 0.3s;
+}
+
+
+input:focus {
+                border-color: #673ab7;
+                outline: none;
+}
+
+
+button {
+                background-color: #673ab7;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s;
+}
+
+
+button:hover {
+                background-color: #311b92;
+}
+        
+canvas {
+        border: 1px solid black;
+
+
+}

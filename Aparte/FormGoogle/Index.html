@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body >
+        
+        <div id="0" class="form-container" style="display: none;" >
+            <div class="question-container">
+                <div class="title" id="title"></div>
+                <div class="subtitle" id="ty"style="display: none;">Your response has been recorded</div>
+            </div>
+        </div>
+
+
+        <div id="1" class="form-container2" style="display: none;">
+            <div class="question-container">
+                <div class="question">Nombre completo:</div>
+                
+            </div>
+
+
+            <div class="input-container">
+                <input type="text" id="username" name="username" placeholder="Ingrese su nombre completo">
+            </div>
+
+
+            <div class="warning" id="warning"style="display: none;">This is a required question</div>
+    
+        </div>
+
+
+
+
+
+
+
+        <div id="1.1" class="form-container2" style="display: none;">
+            <div class="question-container">
+                <div class="question">Documento:</div>
+                
+            </div>
+
+
+            <div class="input-container">
+                <input type="number" id="document" name="document" placeholder="Ingrese su numero de documento">
+            </div>
+
+
+            <div class="warning" id="warning"style="display: none;">This is a required question</div>
+    
+        </div>
+
+        <div id="1.2" class="form-container2" style="display: none;">
+            <div class="question-container">
+                <div class="question">Planta y proceso:</div>
+                
+            </div>
+
+
+            <div class="input-container">
+                <input type="text" id="plant" name="plant" placeholder="Ingrese la planta y proceso al que pertenece">
+            </div>
+
+
+            <div class="warning" id="warning"style="display: none;">This is a required question</div>
+    
+        </div>
+
+
+
+
+
+
+
+
+        <div id="2" class="form-container2" style="display: none;">
+            <div class="question-container">
+                <div id="question" class="question"></div>
+            </div>
+        
+            <input id="file" type="file"  style="display: none;"/>
+            <canvas width="500" height="300"></canvas>
+            <br>
+            <br>
+
+
+            <button type="button" id="clearButton">Reintentar</button>
+
+
+        </div>
+
+
+        <div class="form-container3">
+
+
+            <button type="button" id="submit" onclick="send()" style="display: none;">Enviar</button>
+        </div>
+
+
+    
+
+
+    
+
+
+        <script>
+
+
+            
+        
+
+
+                google.script.run.withSuccessHandler(function(result) {
+            var ti=result;
+            document.getElementById("title").textContent=(ti);
+
+
+            document.getElementById("0").style.display="block";
+            document.getElementById("1").style.display="block";
+
+            document.getElementById("1.1").style.display="block";
+            document.getElementById("1.2").style.display="block";
+
+
+            document.getElementById("2").style.display="block";
+            document.getElementById("submit").style.display="block";
+
+
+        
+            }).title();
+
+
+            
+                        google.script.run.withSuccessHandler(function(result) {
+            var quest=result;
+            document.getElementById("question").textContent=(quest);
+
+
+            }).question();
+
+
+
+
+
+
+
+
+            // create canvas element and append it to document body
+            var canvas = document.querySelector('canvas');
+            var clearButton = document.getElementById('clearButton');
+
+
+            var fileInput = document.getElementById('file');
+
+
+            // some hotfixes... ( ≖_≖)
+
+
+            // get canvas 2D context and set him correct size
+            var ctx = canvas.getContext('2d');
+
+
+            // last known position
+            var pos = { x: 0, y: 0 };
+
+
+            document.addEventListener('mousemove', draw);
+            document.addEventListener('mousedown', setPosition);
+            document.addEventListener('mouseenter', setPosition);
+            canvas.addEventListener('touchstart', setPosition, { passive: false });
+            canvas.addEventListener('touchmove', draw, { passive: false });
+            clearButton.addEventListener('click', clearCanvas);
+
+
+            // new position from mouse event
+            function setPosition(e) {
+            var rect = canvas.getBoundingClientRect(); // Obtener los límites del canvas
+            if (e.touches) {
+                pos.x = e.touches[0].clientX - rect.left;
+                pos.y = e.touches[0].clientY - rect.top;
+            } else {
+                pos.x = e.clientX - rect.left;
+                pos.y = e.clientY - rect.top;
+            }
+            }
+
+
+            function draw(e) {
+            // prevent scrolling
+            e.preventDefault();
+
+
+            // mouse left button must be pressed or touch must be active
+            if (e.buttons !== 1 && !e.touches) return;
+
+
+            ctx.beginPath(); // begin
+
+
+            ctx.lineWidth = 5;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = 'black';
+
+
+            ctx.moveTo(pos.x, pos.y); // from
+            setPosition(e);
+            ctx.lineTo(pos.x, pos.y); // to
+
+
+            ctx.stroke(); // draw it!
+            }
+
+
+            // clear the canvas
+            function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+
+
+
+
+
+            // save the canvas content as a file
+            function saveSignature() {
+
+
+            canvas.toBlob(function (blob) {
+                const file = new File([blob], "signature.png", { type: "image/png" });
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                fileInput.files = dataTransfer.files;
+                var cual = saveFile(fileInput, 'signature');
+            });
+            }
+
+
+
+
+
+            function saveFile(f,cual) {
+
+
+
+
+            let name = document.getElementById("username").value;
+
+            
+            const file = f.files[0];
+            const fr = new FileReader();
+            fr.onload = function (e) {
+                const obj = {
+                filename: cual+" "+name,
+                mimeType: file.type,
+                bytes: [...new Int8Array(e.target.result)]
+                };
+            google.script.run.withSuccessHandler(data => {
+        
+
+
+            }).saveFile(obj, name);
+            }
+            fr.readAsArrayBuffer(file);
+            return(cual);
+
+
+            }
+
+
+
+
+                function send() {
+  const name = document.getElementById("username").value;
+  const documentValue = document.getElementById("document").value;
+  const plantyprocess = document.getElementById("plant").value;
+
+  if (!name || !documentValue || !plantyprocess) {
+    document.getElementById("1").style.borderColor = "red";
+    document.getElementById("1.1").style.borderColor = "red";
+    document.getElementById("1.2").style.borderColor = "red";
+    document.getElementById("warning").style.display = "block";
+    return;
+  }
+
+  saveSignature();
+
+  google.script.run.answer(name, documentValue, plantyprocess);
+
+  document.getElementById("1").style.display = "none";
+  document.getElementById("1.1").style.display = "none";
+  document.getElementById("1.2").style.display = "none";
+  document.getElementById("2").style.display = "none";
+  document.getElementById("submit").style.display = "none";
+  document.getElementById("ty").style.display = "block";
+}
+
+
+
+        </script>
+
+        
+    </body>
+</html>

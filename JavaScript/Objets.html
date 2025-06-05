@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+
+    <script>
+        const b = {
+        }
+
+        console.log(b);
+
+        /*dentro de un objeto a las variables se le van a llamar atributos/propiedades
+        y a las funciones se les llaman metodos*/
+        const Juan={
+            Nombre:"Juan",
+            Apellido:"Peña",
+            Edad:21,
+            Pasatiempos:["caminar","jugar","programar"],
+            soltero:false,
+            contacto:{
+                email:"juan",
+                twitter:"jua",
+                movil:"3692585625"
+            },
+            saludar:function(){ /*Esto es una funcion*/
+                console.log(`Hola :)`);
+            },
+            decirMiNombre:function(){
+                console.log(`Hola me llamo ${this.Nombre} ${this.Apellido} y tengo ${this.Edad} años`);
+            }
+        }
+        console.log(Juan);
+        console.log(Juan["Nombre"]); //Funciona para acceder a un objeto en especifico, en este caso "Nombre"
+        console.log(Juan["Apellido"]);
+        console.log(Juan.Apellido);//Con esta propiedad "objeto1.atributo" tambien accede al objeto en especifico
+        console.log(Juan.Nombre);
+        console.log(Juan.Pasatiempos[1]);
+        console.log(Juan.contacto);
+        console.log(Juan.contacto.twitter);
+
+        Juan.saludar(); //Aqui se esta imprimiendo la funcion
+
+        Juan.decirMiNombre();
+
+        console.log(Object.keys(Juan)); //enumera todos los objetos que esten el "Juan"
+        console.log(Object.values(Juan));//Este son los valores
+        console.log(Juan.hasOwnProperty("Nombre")); //comprueba si esta la propiedad "Nombre"
+        console.log(Juan.hasOwnProperty("Nacimiento"));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Operadores</h1>
+
+    <script>
+        /*Aritmeticos: +, -, *, /, %, () */
+        let a = 5+5-(10*3);
+        let modulo = 5%2 //Nos da el residuo de una divicion
+
+        console.log(a);
+        console.log(modulo);
+
+        /*Relacionales: <, >, <=, >=, ==, ===, !=, !==*/
+
+        console.log(8>9);//comprueba si 8 es mayor a 9 "false"
+        console.log(8<9); //comprueba que 8 es menor que 9 "true"
+        console.log(8>=9);//mayor o igual que 9 "false"
+        console.log(8<=9);//menor o igual que 9 "true"
+        console.log(8>=8);
+
+        /*
+        =: uno solo es asignacion de variable
+        ==: dos es comparacion de valores
+        ===: tres es compracion de tipo de dato y de valor
+        */
+
+        /*Operadores de drecremento*/
+        let i = 1;
+        //i=i + 2;
+        i+=3; //es lo mismo que el "i=i+2"
+
+        /*Operador unario*/
+
+        i++;
+        i--; //solo funciona por si queremos sumar o restar
+        ++i;
+        
+        console.log(i);
+
+        /*Operadores Logicos
+        ! - Not "Niega, es decir lo que es verdadero lo vuelve falso y viceversa"
+        || - Or "Cuando tengo 2 o mas condiciones, con que una se cumpla es decir sea verdadera, el OR sera verdadero"
+        && - And "Cuando tengo 2 o mas condiciones, todas tienen que cumplirse, es decir ser verdaderas, para que AND se valide"
+        */
+
+        console.log(!true);
+        console.log(!false);
+        console.log((9===9)||("9"===9));
+        console.log((9===9)&&("9"===9));
+        console.log((9===9)&&("9"==="9"));
+
+    </script>
+</body>
+</html>

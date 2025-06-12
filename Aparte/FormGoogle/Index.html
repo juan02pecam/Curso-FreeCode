@@ -273,30 +273,30 @@
 
 
 
-                function send() {
-  const name = document.getElementById("username").value;
-  const documentValue = document.getElementById("document").value;
-  const plantyprocess = document.getElementById("plant").value;
+            function send() {
+                const name = document.getElementById("username").value;
+                const documentValue = document.getElementById("document").value;
+                const plantyprocess = document.getElementById("plant").value;
 
-  if (!name || !documentValue || !plantyprocess) {
-    document.getElementById("1").style.borderColor = "red";
-    document.getElementById("1.1").style.borderColor = "red";
-    document.getElementById("1.2").style.borderColor = "red";
-    document.getElementById("warning").style.display = "block";
-    return;
-  }
+                if (!name || !documentValue || !plantyprocess) {
+                    document.getElementById("1").style.borderColor = "red";
+                    document.getElementById("1.1").style.borderColor = "red";
+                    document.getElementById("1.2").style.borderColor = "red";
+                    document.getElementById("warning").style.display = "block";
+                    return;
+                }
 
-  saveSignature();
+                saveSignature();
 
-  google.script.run.answer(name, documentValue, plantyprocess);
+                google.script.run.answer(name, documentValue, plantyprocess);
 
-  document.getElementById("1").style.display = "none";
-  document.getElementById("1.1").style.display = "none";
-  document.getElementById("1.2").style.display = "none";
-  document.getElementById("2").style.display = "none";
-  document.getElementById("submit").style.display = "none";
-  document.getElementById("ty").style.display = "block";
-}
+                document.getElementById("1").style.display = "none";
+                document.getElementById("1.1").style.display = "none";
+                document.getElementById("1.2").style.display = "none";
+                document.getElementById("2").style.display = "none";
+                document.getElementById("submit").style.display = "none";
+                document.getElementById("ty").style.display = "block";
+            }
 
 
 

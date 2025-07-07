@@ -142,4 +142,8 @@ section{
 
   b{
     background-color: cyan;
+
+    height: 100px; /*alto*/
+    width: 300px; /*ancho*/
+
   }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lampara</title>
+    </head>
+    <body>
+
+        <div>
+            <!--Cambio de texto al oprimir el boton-->
+
+            <h2>¿Qué puede hacer JavaScript?</h2>
+            <p id="demo">JavaScript puede cambiar el contenido HTML.</p>
+
+            <button onclick='document.getElementById("demo")./*"innerHTML" hace que el texto que se pone, cambie el texto del html original*/innerHTML= "Hola Java Script"'>Haz clic</button> 
+
+        </div>
+
+        <div>
+            <!--En este Div alojaremos el proceso de la lampara-->
+
+            <h2>¿Qué puede hacer JavaScript?</h2>
+            <p>JavaScript puede cambiar los valores de los atributos HTML.</p>
+            <p>En este caso, JavaScript cambia el valor del atributo src (fuente) de una imagen.</p>
+
+            <button onclick="document.getElementById(`miImagen`).src=`/Imagenes/pic_bulbon.gif`">Enciende la luz</button>
+            
+            <img id="miImagen" src="/Imagenes/pic_bulbon.gif">
+            
+            <button onclick="document.getElementById(`miImagen`).src=`/Imagenes/pic_bulboff.gif`">Apaga la luz</button>
+
+        </div>
+
+        <div>
+            <!--cambio de tipo de tamaño de la letra-->
+            <h2>¿Qué puede hacer JavaScript?</h2>
+            <p id="dema">JavaScript puede cambiar el contenido HTML.</p>
+
+            <button onclick="document.getElementById(`dema`).style.fontSize=`35px`">Haz Clic</button>
+
+        </div>
+
+        <div>
+            <!--Tambien oculta elementos HTML-->
+
+            <h2>¿Qué puede hacer JavaScript?</h2>
+            <p id="demE">JavaScript puede cambiar el contenido HTML.</p>
+
+            <button onclick="document.getElementById(`demE`).style.display=`none`">Haz Clic</button>
+
+        </div>
+
+        <div>
+            <!--Este va a mostrar los elementos que mencionemos-->
+
+            <h2>¿Qué puede hacer JavaScript?</h2>
+            <p>JavaScript puede cambiar el contenido HTML.</p>
+            <p  id="demO" style="display: none">Hola JavaScript</p>
+
+            <button onclick="document.getElementById(`demO`).style.display=`block`">Haz Clic</button>
+
+        </div>
+
+        <div>
+            <!--Con el script-->
+            <h2>JavaScript en el body</h2>
+            <p id="dem0"></p>
+        </div>
+
+        <div>
+            <!--con el script, pero con function-->
+            <h2>Demostración de JavaScript en Head</h2>
+
+            <p id="dem4">Este texto cambiara</p>
+
+            <button type="button" onclick="myFunction()">Haz clic</button>
+
+        </div>
+
+        <div>
+            <!--Demostracion de un script en el body-->
+
+            <h2>Demostración de JavaScript en Body</h2>
+
+            <p id="dem7">Este texto cambiara</p>
+
+            <button type="button" onclick="myFunction2()">Haz clic</button>
+
+        </div>
+
+        <script>
+            //tercero con function en el body
+
+            function myFunction2 (){
+                document.getElementById("dem7").innerHTML = "Este texto deberia ir dentro de body, pero no me gusta colocar mucha informacion en el body, si no solo la escencial";
+            }
+
+        </script>
+
+
+        <!------------------------------------------------------------------------------------------------------------->
+        
+        
+    </body>
+
+    <script>
+        //Primer script
+        document.getElementById("dem0").innerHTML="Hola JavaScript, estoy en el script";
+    </script>
+
+    <script>
+        //Segundo con function
+
+        function myFunction (){
+            document.getElementById("dem4").innerHTML = "Este texto deberia ir en el head, pero no me gusta colocar mucha informacion en el head";
+        }
+
+    </script>
+
+    <script src="">
+        /*Si agrego el "src" en un script, puedo llamar un script que este alojado en otro lugar*/
+    </script>
+
+    
+
+</html>

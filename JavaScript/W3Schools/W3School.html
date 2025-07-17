@@ -101,12 +101,43 @@
 
         <!------------------------------------------------------------------------------------------------------------->
         
-        
+        <div>
+            <h2>Document Write</h2>
+            <p>Que hace Document Write?</p>
+
+            <button type="button" onclick="document.write(5 + 6)">Pruebalo</button>
+            <!--Después de cargar un documento HTML eliminará todo el HTML existente
+            El método document.write() sólo debe usarse para pruebas.
+            -->
+        </div>
+
+        <div>
+            <h2>Window Alert</h2>
+            <p>Que puede hacer Window Alert</p>
+
+            <script>
+                window.alert(5 + 6);
+                /*Window alert, no es necesario tener el "window", puede funcionar con solo el "alert",
+                nos funcionar cuando alguien llena un form y lo enviar, dar una alerta */
+            </script>
+        </div>
+
+        <div>
+            
+            <h2>El metodo window.print()</h2>
+            <p>Al hacer clic en el boton, la pagina actual se imprimira</p>
+
+            <button onclick="window.print()">Imprimir esta pagina</button>
+
+        </div>
+
     </body>
 
     <script>
         //Primer script
         document.getElementById("dem0").innerHTML="Hola JavaScript, estoy en el script";
+        //"innerHTML" permite colocarle etiqueta al elemento
+        //"innerText" permite simplemte asignar el texto deseado
     </script>
 
     <script>

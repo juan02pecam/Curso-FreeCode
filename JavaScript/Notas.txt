@@ -10,3 +10,11 @@ En JavaScript cada valor o dato tiene sus propias propiedades
 
 - Los metodos son acciones o funciones que permiten ejecutar algo con la variable o el tipo de dato que en el momento se 
 este trabajando
+
+
+JavaScript puede "mostrar" datos de diferentes maneras:
+
+- Al escribir en un elemento HTML, utilice "innerHTML" o "innerText".
+- Escribiendo en la salida HTML usando "document.write()".
+- Escribiendo en un cuadro de alerta, utilizando "window.alert()".
+- Escribiendo en la consola del navegador, usando "console.log()".

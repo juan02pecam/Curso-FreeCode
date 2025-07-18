@@ -53,7 +53,8 @@ h1, h2{
  li a{
     color: #dfdfe2;  /*Para los elementos de lista que contienen enlaces "a"*/
     text-decoration: none;
-    float: right; /*alinea los elementos donde deseemos sin interrumpir los otros elementos*/
+    float: right; /*alinea los elementos donde deseemos sin interrumpir los otros elementos
+    tambien sirve para alinear los div´s*/
 }
 
 

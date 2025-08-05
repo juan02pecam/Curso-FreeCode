@@ -2,129 +2,132 @@
 <html>
     <head>
 
-        <!--Imagen-->
-        <style>
-        #div1, #div2 {
-        float: left;
-        width: 100px;
-        height: 35px;
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid black;
-        }
-        </style>
-        <script>
-        function dragstartHandler(ev) {
-        ev.dataTransfer.setData("text", ev.target.id);
-        }
-
-        function dragoverHandler(ev) {
-        ev.preventDefault();
-        }
-
-        function dropHandler(ev) {
-        ev.preventDefault();
-        const data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-        }
-        </script>
     </head>
     <body>
 
-        <h1>Drag and Drop API</h1>
+        <div>
+            <!--Imagen para arrastrar-->
+            <style>
+                #div1, #div2 {
+                    float: left;
+                    width: 100px;
+                    height: 35px;
+                    margin: 10px;
+                    padding: 10px;
+                    border: 1px solid black;
+                }
+            </style>
 
-        <p>Drag the image back and forth between the two div elements.</p>
+            <h1>Drag and Drop API</h1>
 
-        <div id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-        <img id="img1" src="/Imagenes/pic_bulbon.gif" draggable="true" ondragstart="dragstartHandler(event)" width="88" height="31">
+            <p>Drag the image back and forth between the two div elements.</p>
+
+            <div id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
+            <img id="img1" src="/Imagenes/pic_bulbon.gif" draggable="true" ondragstart="dragstartHandler(event)" width="88" height="31">
+            </div>
+
+            <div id="div2" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
+
+            <script>
+                function dragstartHandler(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+                }
+
+                function dragoverHandler(ev) {
+                ev.preventDefault();
+                }
+
+                function dropHandler(ev) {
+                ev.preventDefault();
+                const data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+                }
+            </script>
+
         </div>
 
-        <div id="div2" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
-
-    </body>
-</html>
-
-<!DOCTYPE HTML>
-<html>
-    <head>
-
-        <!--Enlace-->
-        <style>
-        #div1 {
-        width: 350px;
-        height: 70px;
-        padding: 10px;
-        border: 1px solid #aaaaaa;
-        }
-        </style>
-        <script>
-            function dragstartHandler(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-            }
-
-            function dragoverHandler(ev) {
-            ev.preventDefault();
-            }
-
-            function dropHandler(ev) {
-            ev.preventDefault();
-            const data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-            }
-        </script>
-    </head>
-    <body>
-
-    <h1>Drag and Drop API</h1>
-
-        <p>Drag and drop the W3Schools link into the rectangle:</p>
-
-        <div id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
+        <br>
         <br>
 
-        <a id="link1" href="https://w3schools.com" draggable="true" ondragstart="dragstartHandler(event)">W3Schools.com</a>
+        <div>
 
-    </body>
-</html>
+            <!--Texto-->
+            <style>
+                #div1 {
+                    width: 350px;
+                    height: 70px;
+                    padding: 10px;
+                    border: 1px solid #aaaaaa;
+                }
+            </style>
 
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <!--Texto-->
-        <style>
-        #div1 {
-        width: 350px;
-        height: 70px;
-        padding: 10px;
-        border: 1px solid #aaaaaa;
-        }
-        </style>
-        <script>
-            function dragstartHandler(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-            }
+            <h1>Drag and Drop API</h1>
 
-            function dragoverHandler(ev) {
-            ev.preventDefault();
-            }
+            <p>Drag and drop the W3Schools header into the rectangle:</p>
 
-            function dropHandler(ev) {
-            ev.preventDefault();
-            const data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-            }
-        </script>
-    </head>
-    <body>
+            <div id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
+            <br>
 
-        <h1>Drag and Drop API</h1>
+            <h1 id="h1" draggable="true" ondragstart="dragstartHandler(event)">W3Schools.com</h1>
 
-        <p>Drag and drop the W3Schools header into the rectangle:</p>
+            <script>
+                function dragstartHandler(ev) {
+                    ev.dataTransfer.setData("text", ev.target.id);
+                }
 
-        <div id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
+                function dragoverHandler(ev) {
+                    ev.preventDefault();
+                }
+
+                function dropHandler(ev) {
+                    ev.preventDefault();
+                    const data = ev.dataTransfer.getData("text");
+                    ev.target.appendChild(document.getElementById(data));
+                }
+            </script>
+
+        </div>
+
+        <br>
         <br>
 
-        <h1 id="h1" draggable="true" ondragstart="dragstartHandler(event)">W3Schools.com</h1>
+        <div>
+
+            <!--Enlace-->
+            <style>
+                #div1 {
+                    width: 350px;
+                    height: 70px;
+                    padding: 10px;
+                    border: 1px solid #aaaaaa;
+                }
+            </style>
+
+            <h1>Drag and Drop API</h1>
+
+            <p>Drag and drop the W3Schools link into the rectangle:</p>
+
+            <div id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
+            <br>
+
+            <a id="link1" href="https://w3schools.com" draggable="true" ondragstart="dragstartHandler(event)">W3Schools.com</a>
+
+            <script>
+                function dragstartHandler(ev) {
+                    ev.dataTransfer.setData("text", ev.target.id);
+                }
+
+                function dragoverHandler(ev) {
+                    ev.preventDefault();
+                }
+
+                function dropHandler(ev) {
+                    ev.preventDefault();
+                    const data = ev.dataTransfer.getData("text");
+                    ev.target.appendChild(document.getElementById(data));
+                }
+            </script>
+        </div>
 
     </body>
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Edad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Calculadora de Edad</h1>
+    <form onsubmit="calcularEdad(event)">
+
+        <input type="number" id="anioNacimiento" placeholder="Año de nacimiento" />
+        <button type="submit">Calcular edad</button>
+        <!--<button onclick="calcularEdad()">Calcular edad</button>-->
+
+        <div id="resultado"></div>
+    </form>
+
+  <script>
+    function calcularEdad(event) {
+      event.preventDefault();
+
+      const anioNacimiento = document.getElementById("anioNacimiento").value;
+      const anioActual = new Date().getFullYear();
+        const resultado = document.getElementById("resultado");
+
+      if (anioNacimiento === "" || anioNacimiento > anioActual || anioNacimiento < 1900) {
+        document.getElementById("resultado").innerText = "Por favor, ingresa un año válido.";
+        return;
+      }
+
+      /*if (anioNacimiento === "" || anioNacimiento < 1900){
+        document.getElementById("resultado").innerHTML="Por favor, ingresa un año válido.";
+        return;
+      }*///lo que esta comentado es porque fue corregido por la IA, es decir es funcional, pero tiene validaciones duplicadas 
+
+      const edad = anioActual - anioNacimiento;
+      //document.getElementById("resultado").innerText = "Tienes " + edad + " años.";
+      resultado.innerText = "Tines " + edad + " años.";
+      
+      if (edad < 18){
+        resultado.style.color = "red";
+        //document.getElementById("resultado").style.color = `red`;
+        //return;
+      }else{
+        resultado.style.color = "green";
+      }
+      
+
+    }
+  </script>
+</body>
+</html>

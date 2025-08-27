@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contador</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f4f4f4;
+    }
+    #valor {
+      font-size: 40px;
+      margin: 20px;
+      color: blue;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contador Interactivo</h1>
+  <div id="valor">0</div>
+  <button onclick="incrementar()">+1</button>
+  <button onclick="disminuir()">-1</button>
+  <button onclick="reiniciar()">Reiniciar</button>
+
+  <script>
+    let contador = 0;
+    const valor = document.getElementById("valor");
+
+    function incrementar() {
+      contador++;
+      actualizarContador();
+    }
+
+    function disminuir() {
+      contador--;
+      actualizarContador();
+    }
+
+    function reiniciar() {
+      contador = 0;
+      actualizarContador();
+    }
+
+    function actualizarContador() {
+      valor.innerText = contador;
+      valor.style.color = contador > 0 ? "green" : contador < 0 ? "red" : "blue";
+    }
+  </script>
+</body>
+</html>

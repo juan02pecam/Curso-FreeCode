@@ -2,7 +2,8 @@ console.log("Hi there!");
 
 const botName = "teacherBot";
 
-const greeting = `My name is ${botName}.`;
+const greeting = `My name is ${botName}.`;  /*${} sirver para insertar variables dentro de un string, 
+se llama template literal, se usan comillas invertidas `` en lugar de comillas normales "" o ''*/
 console.log(greeting);
 
 const subject = "JavaScript";
@@ -19,7 +20,8 @@ console.log(subject.length);
 console.log(
   `Here is an example of using the length property on the word ${topic}.`,
 );
-console.log(topic.length);
+console.log(topic.length); /*length es una propiedad que devuelve el número de caracteres en un string, 
+incluyendo espacios y caracteres especiales.*/
 
 console.log(
   `Here is an example of accessing the first letter in the word ${subject}.`,
@@ -36,7 +38,8 @@ console.log(
   `Here is an example of accessing the last letter in the word ${subject}.`,
 );
 
-const lastCharacter = subject[subject.length - 1];
+const lastCharacter = subject[subject.length - 1]; /*para acceder al último carácter de un string, 
+se puede usar la longitud del string menos uno, ya que los índices comienzan en 0.*/
 console.log(lastCharacter);
 
 const learningIsFunSentence = "Learning is fun.";

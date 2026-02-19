@@ -54,3 +54,18 @@ console.log(learningIsFunSentence.indexOf("fun"));
 console.log(learningIsFunSentence.indexOf("learning"));
 
 console.log("I hope you enjoyed learning today.");
+
+
+
+//-------------------------------------
+
+//Metodo charCodeAt() devuelve un número entero entre 0 y 65535 representando el valor Unicode del carácter en la posición dada.
+let letter = "a";
+console.log(letter.charCodeAt("0"));  // 65
+
+let symbol = "!";
+console.log(symbol.charCodeAt(0));  // 33
+
+//Metodo fromCharCode() devuelve una cadena creada a partir de la secuencia de valores Unicode dados.
+let char = String.fromCharCode(65);
+console.log(char);  //  A

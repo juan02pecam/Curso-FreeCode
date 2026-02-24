@@ -31,3 +31,10 @@ const favoriteSubjectSentence =
 console.log(favoriteSubjectSentence);
 
 console.log("Well, it was nice to talk to you. Have a nice day!");
+
+
+/*
+Hay dos formas de concatenar una cadena de texto, con: "texto" + variable + "texto"
+Y la segunda es: `texto ${variable} texto` 
+Para sacar `` se usa alt + 96
+*/

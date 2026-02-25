@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numbers</title>
-</head>
-<body>
-    <h1>Numbers in JavaScript</h1>
 
-    <script>
         let a = 2;
         let b = new Number(1);
         let c = 7.19;
@@ -30,11 +20,3 @@
 
         console.log(c + Number.parseInt(d));
         console.log(c + Number.parseFloat(d));
-
-
-
-
-    </script>
-    
-</body>
-</html>

@@ -60,3 +60,6 @@ console.log(5 === '5'); // false
 
 //operadores de desigualdad "!=" si ambos datos son del mismo tipo numero o cadena
 console.log(5 != "5"); // false
+
+
+// JavaScript provides several bitwise operators, including AND (&), OR (|), XOR (^), NOT (~), left shift (<<), and right shift (>>).

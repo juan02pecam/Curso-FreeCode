@@ -1,4 +1,4 @@
-const edad = 22
+/* const edad = 22
 let mensaje
 
 if (edad >= 19) {
@@ -7,4 +7,28 @@ if (edad >= 19) {
     mensaje = "No eres considerado un adulto por Juan"
 }
 
-console.log(mensaje)
+console.log(mensaje) */
+
+
+const a = 2;
+if (1 == "1") {
+  let b = 3;
+  console.log(a + b);
+}
+//console.log(b);
+
+
+let vehicle = "car";
+
+switch (vehicle) {
+  case "bike":
+    console.log("Bikes are two-wheelers.");
+    break;
+  case "car":
+    console.log("Some cars are 4x4.");
+  case "truck":
+    console.log("Trucks can carry heavy loads.");
+    break;
+  default:
+    console.log("Unknown vehicle.");
+}

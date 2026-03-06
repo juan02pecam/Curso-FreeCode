@@ -46,3 +46,6 @@ switch (dayOfWeek) {
     default:
         console.log("Invalid day! Please enter a number between 1 and 7.");
 }
+
+//Vale la pena señalar que las sentencias de switch en JavaScript utilizan comparación estricta (===), 
+// lo que significa que no realizan conversión de tipos. Esto puede ser una ventaja en términos de previsibilidad y evitar errores sutiles.

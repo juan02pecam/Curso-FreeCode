@@ -32,6 +32,10 @@ function one(){
     let men = "Hello"
     console.log(men);
 }
-
-
+//-----
 one();
+
+function addTwoAndSeven(){
+    return 2 + 7;
+}
+console.log(addTwoAndSeven())

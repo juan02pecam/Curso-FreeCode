@@ -18,6 +18,16 @@ const calculateArea = (width, height) => width * height;
 
 //ejemplo de variables 
 
+//Variable global
+let globalVar = "I'm a global variable";
+
+function printGlobalVar() {
+    console.log(globalVar);
+}
+
+printGlobalVar(); // "I'm a global variable"
+
+//Funcion Local
 function one(){
     let men = "Hello"
     console.log(men);

@@ -1,5 +1,5 @@
 function booWho(val){
-    return val === Boolean ? true : Boolean(val);
+    return typeof val === "boolean"
 }
 
 console.log(booWho(true))

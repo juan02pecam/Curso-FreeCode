@@ -54,5 +54,6 @@ let chessboard = [
     ["r", "n", "b", "q", "k", "b", "n", "r"]
 ];
 
-console.log(chessboard[0][3]);
-console.log(chessboard[7][3]); // "Q"
+console.log(chessboard[0][3]); // "Q"
+console.log(chessboard[7][3]); // "q"
+

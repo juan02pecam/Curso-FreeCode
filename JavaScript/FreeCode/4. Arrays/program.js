@@ -61,4 +61,43 @@ function removeFirstLunch (lunches){
 
 removeFirstLunch(["Salad", "Eggs", "Cheese"])
 
+function getRandomLunch (lunches){
 
+    if(lunches === 0){
+
+        console.log("No lunches available.");
+
+        return;
+
+    }else{
+
+        const randomLunch = frutas[Math.floor(Math.random() * frutas.length)];
+
+        return lunches
+    }
+
+    console.log(`Randomly selected lunch: ${getRandomLunch}`);
+}
+
+getRandomLunch(["Salad", "Eggs", "Cheese"])
+
+
+function showLunchMenu (lunches){
+    if(lunches === 0){
+
+        console.log("The menu is empty.");
+
+        return
+
+    }else{
+
+        const lunchMenu = ([]);
+
+        console.log(`Menu items: ${lunchMenu}`);
+
+        return lunches
+
+    }
+}
+
+showLunchMenu(["Greens", "Corns", "Beans"])

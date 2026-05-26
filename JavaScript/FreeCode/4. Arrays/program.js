@@ -44,7 +44,7 @@ removeLastLunch(["Stew", "Soup", "Toast"])
 
 function removeFirstLunch (lunches){
 
-    if(lunches === 0){
+    if(lunches.length === 0){
 
         console.log("No lunches to remove.");
 
@@ -59,31 +59,29 @@ function removeFirstLunch (lunches){
     }
 }
 
-removeFirstLunch(["Salad", "Eggs", "Cheese"])
+removeLastLunch(["Salad", "Eggs", "Cheese"])
 
-function getRandomLunch (lunches){
+function getRandomLunch(lunches) {
 
-    if(lunches === 0){
+    if (lunches.length === 0) {
 
         console.log("No lunches available.");
 
         return;
 
-    }else{
+    } else {
 
-        const randomLunch = frutas[Math.floor(Math.random() * frutas.length)];
+        const randomLunch = lunches[Math.floor(Math.random() * lunches.length)];
 
-        return lunches
+        console.log(`Randomly selected lunch: ${randomLunch}`);
+
+        return  randomLunch;
     }
-
-    console.log(`Randomly selected lunch: ${getRandomLunch}`);
 }
-
-getRandomLunch(["Salad", "Eggs", "Cheese"])
 
 
 function showLunchMenu (lunches){
-    if(lunches === 0){
+    if(lunches.length === 0){
 
         console.log("The menu is empty.");
 
@@ -91,9 +89,8 @@ function showLunchMenu (lunches){
 
     }else{
 
-        const lunchMenu = ([]);
 
-        console.log(`Menu items: ${lunchMenu}`);
+        console.log(`Menu items: ${lunches.join(", ")}`);
 
         return lunches
 

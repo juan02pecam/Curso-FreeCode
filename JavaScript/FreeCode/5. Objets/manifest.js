@@ -33,8 +33,15 @@ function validateManifest(manifest) {
 
   if(manifest.weight === undefined){
     errors.weight="Missing";
-  }else if(manifest.weight <= 0 || Number.isNaN(manifest.weight) || typeof manifest.weight !== "number"){
+  }else if(typeof manifest.weight !== "number" || manifest.weight <= 0 || Number.isNaN(manifest.weight)){
     errors.weight="Invalid";
+  }
+  return errors
+
+  if(manifest.containerId === undefined){
+    errors.containerId="Missing";
+  }else if(!Number.isInteger(manifest.containerId) || manifest.containerId <= 0){
+    errors.containerId="Invalid"
   }
   return errors
 }

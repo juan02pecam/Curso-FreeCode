@@ -44,36 +44,14 @@ function validateManifest(manifest) {
     errors.containerId="Invalid"
   }
   return errors
+
+  if(manifest.unit === underfined){
+    error.unit="Missing";
+  }else if (String.unit("Kg","Lb")){
+
+  }
+
+  
 }
 
 
-function 
-
-/**¡
- * 
- * typeof manifest.weight !== number
- * 
- * 
- * 
- * // --- CASO 1: Conversión de 'lb' a 'kg' ---
-const envioEnLibras = { id: 1, weight: 100, unit: "lb" };
-const resultado1 = normalizeUnits(envioEnLibras);
-
-console.log("Caso 1 (debe ser weight: 45, unit: 'kg'):");
-console.log(resultado1);
-
-
-// --- CASO 2: Mantener si ya es 'kg' ---
-const envioEnKilos = { id: 2, weight: 50, unit: "kg" };
-const resultado2 = normalizeUnits(envioEnKilos);
-
-console.log("Caso 2 (debe ser weight: 50, unit: 'kg'):");
-console.log(resultado2);
-
-
-// --- CASO 3: Verificar que el objeto original NO cambió ---
-console.log("Caso 3 (Inmutabilidad - el original debe seguir con unit: 'lb' y weight: 100):");
-console.log(envioEnLibras);
-
-// Comprobación de referencia en memoria (debe dar true):
-console.log("¿Son objetos distintos en memoria?:", resultado1 !== envioEnLibras);**/
